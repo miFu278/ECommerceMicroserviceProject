@@ -1,3 +1,4 @@
+using OrderApi.Application.DependencyInjection;
 using OrderApi.Infrastructure.DependencyInjection;
 namespace OrderApi.Presentation
 {
@@ -14,6 +15,7 @@ namespace OrderApi.Presentation
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddInfrastructureService(builder.Configuration);
+            builder.Services.AddApplicationService(builder.Configuration);
 
             var app = builder.Build();
 
